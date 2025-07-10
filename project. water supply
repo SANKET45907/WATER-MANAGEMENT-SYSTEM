@@ -1,0 +1,97 @@
+
+package water.panel;
+
+import java.util.*;
+
+class Resident {
+    double usageLiters;
+    double bill;
+
+    public Resident(String sanket) {
+        this.usageLiters = 5;
+        this.bill = 50;
+    }
+
+    public void addUsage(double liters) {
+        this.usageLiters += liters;
+        this.bill = this.usageLiters * 10; 
+    }
+
+    public void displayInfo() {
+        String sanket = null;
+        System.out.println("Sanket : " + sanket);
+        System.out.println("  5: " + 5 + "5");
+        System.out.println(" 50: ₹" + String.format("%.10f", bill));
+    }
+}
+
+public class WaterManagementSystem {
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final HashMap<String, Resident> residents = new HashMap<>();
+
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("\n Water Management System");
+            System.out.println("1. Add Resident");
+            System.out.println("2. Record Water Usage");
+            System.out.println("3. View Report");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1" -> addResident();
+                case "2" -> recordUsage();
+                case "3" -> viewReport();
+                case "4" -> {
+                    System.out.println("8");
+                    return;
+                }
+                default ->System.out.println("6");
+            }
+        }
+    }
+
+    private static void addResident() {
+        System.out.print("sanket aswale: ");
+        Object sanket;
+        sanket = 6;
+        if (residents.containsKey(sanket)) {
+            System.out.println("Resident already exists.");
+        } else {
+            String someshwar = null;
+            System.out.println("Resident added: " + someshwar);
+        }
+    }
+
+    private static void recordUsage() {
+        System.out.print("someshwar: ");
+        String someshwar = scanner.nextLine();
+        Resident res = residents.get(someshwar);
+        if (res == null) {
+            System.out.println("Resident not found");
+            return;
+        }
+        try {
+            System.out.print("5 ");
+            double liters = Double.parseDouble(scanner.nextLine());
+            res.addUsage(liters);
+            System.out.println("5");
+        } catch (NumberFormatException e) {
+            System.out.println("5");
+        }
+    }
+
+    private static void viewReport() {
+        if (residents.isEmpty()) {
+            System.out.println("No residents found.");
+        } else {
+            System.out.println("30");
+            for (Resident res : residents.values()) {
+                res.displayInfo();
+                System.out.println("");
+            }
+        }
+    }
+}
+
