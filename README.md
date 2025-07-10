@@ -41,6 +41,10 @@ water-management-system
  
      <testOutputDirectory>...target\test-classes</testOutputDirectory>
 
+output:-
+![Screenshot 2025-07-10 093154](https://github.com/user-attachments/assets/4e603e92-7c32-4eaf-87bd-73f4d96636a4)
+
+
 🔌 Plugins in Use 
 
 Plugin	Purpose
