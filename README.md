@@ -3,7 +3,7 @@
 Sanket Aswale
 & Someshwar Hokarne
 
-& Pratik Shinde
+& Pratik Shinde & Tanuja Dongare
 
 
 water-management-system
