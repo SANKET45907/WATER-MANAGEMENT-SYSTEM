@@ -98,3 +98,14 @@ and located in:
 
 target/
 
+Dependencies
+<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+
+<dependency>
+  
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.7.7</version>
+    <scope>runtime</scope>
+</dependency>
+
